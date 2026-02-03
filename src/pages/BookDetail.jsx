@@ -14,7 +14,7 @@ function BookDetail() {
   const [language, setLanguage] = useState('');
   const { id } = useParams();
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/books/${id}`, {
+    axios.get(`https://django-final-iyj8.onrender.com/api/books/${id}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem("token")}`
       }

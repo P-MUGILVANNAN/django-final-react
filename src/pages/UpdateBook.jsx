@@ -17,7 +17,7 @@ function UpdateBook() {
   const { id } = useParams();
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/books/${id}`, {
+    axios.get(`https://django-final-iyj8.onrender.com/api/books/${id}`, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem("token")}`
       }
@@ -52,7 +52,7 @@ function UpdateBook() {
         cover_image:cover_image,
         language:language
       }
-      const response = await axios.put(`http://127.0.0.1:8000/api/books/${id}/`,updatedBook, {
+      const response = await axios.put(`https://django-final-iyj8.onrender.com/api/books/${id}/`,updatedBook, {
         headers:{
           'Authorization': `Bearer ${localStorage.getItem("token")}`
         }

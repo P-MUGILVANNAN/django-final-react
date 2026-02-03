@@ -29,7 +29,7 @@ function AddBook() {
         cover_image:cover_image,
         language:language
       }
-      const response = await axios.post("http://127.0.0.1:8000/api/books/",book,{
+      const response = await axios.post("https://django-final-iyj8.onrender.com/api/books/",book,{
         headers: {
           'Authorization': `Bearer ${localStorage.getItem("token")}`
         }

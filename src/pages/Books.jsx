@@ -5,7 +5,7 @@ function Books() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/books/", {
+    axios.get("https://django-final-iyj8.onrender.com/api/books/", {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem("token")}`
       }
@@ -20,7 +20,7 @@ function Books() {
 
   const handleDelete = async (id)=>{
     try{
-      await axios.delete(`http://127.0.0.1:8000/api/books/${id}/`,{
+      await axios.delete(`https://django-final-iyj8.onrender.com/api/books/${id}/`,{
         headers:{
           'Authorization': `Bearer ${localStorage.getItem("token")}`
         }
