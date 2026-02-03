@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Books() {
   const [books, setBooks] = useState([]);
@@ -47,8 +48,8 @@ function Books() {
                   <p className="card-text">Author: {book.author}</p>
                   <p className="card-text">Price: {book.price}</p>
                   <p className="card-text">Genre: {book.genre}</p>
-                  <a href={`/book-details/${book.id}`} className="btn btn-primary me-3 mb-3">View Details</a>
-                  <a href={`/edit-book/${book.id}`} className="btn btn-primary mb-3">Update Book</a><br />
+                  <Link to={`/book-details/${book.id}`} className="btn btn-primary me-3 mb-3">View Details</Link>
+                  <Link to={`/edit-book/${book.id}`} className="btn btn-primary mb-3">Update Book</Link><br />
                   <button onClick={()=>handleDelete(book.id)} className="btn btn-danger">Delete Book</button>
                 </div>
               </div>
